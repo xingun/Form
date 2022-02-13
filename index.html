@@ -16,20 +16,20 @@
                 <form name="google-sheet">
                     <div id="form_alerts"></div>
                     <div class="form-group mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        <label for="name" class="form-label">Họ Và Tên</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Nhập tên của bạn" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Nhập địa chỉ email" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Enter your message" rows="5" required></textarea>
+                        <label for="message" class="form-label">Tin Nhắn</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Lời nhắn" rows="5" required></textarea>
                     </div>
                     <div>
-                        <button class="btn btn-primary me-2" type="submit">Send message!</button>
-                        <button class="btn btn-danger" type="reset">Reset the form!</button>
+                        <button class="btn btn-primary me-2" type="submit">Gửi tin nhắn</button>
+                        <button class="btn btn-danger" type="reset">Tạo lại form</button>
                     </div>
                 </form>
             </div>
@@ -45,8 +45,8 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
-            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Tin nhắn gửi thành công<br>Chúc bạn một ngày tốt lành ✨.</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Tin nhắn không gửi được, vui lòng kiểm tra lại. Cảm ơn!</div>"))
         })
     </script>
 </body>
